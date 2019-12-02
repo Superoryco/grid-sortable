@@ -19,7 +19,8 @@ class SaveOrderBtn extends AbstractTool
 
         $script = <<<SCRIPT
 (function () {
-    
+    	
+    $('#{$name}').unbind( "click" );
     $('#{$name}').click(function () {
 
         $.post('{$route}', {
